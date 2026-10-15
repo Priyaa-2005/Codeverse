@@ -1,4 +1,5 @@
 import Navbar from "../components/layout/Navbar";
+import PlatformSection from "../components/platforms/PlatformSection";
 
 function Home() {
   return (
@@ -8,8 +9,9 @@ function Home() {
     >
       <Navbar />
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="relative flex min-h-screen items-center px-6 pt-28">
+
         {/* Background Glow */}
         <div className="pointer-events-none absolute left-1/2 top-20 -z-0 h-96 w-96 -translate-x-1/2 rounded-full bg-violet-600/20 blur-[120px]" />
 
@@ -18,10 +20,12 @@ function Home() {
           {/* Left Content */}
           <div className="text-center lg:text-left">
 
+            {/* Badge */}
             <div className="mb-6 inline-flex items-center rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-2 text-sm text-violet-300">
               🚀 Your Coding Journey, Unified
             </div>
 
+            {/* Heading */}
             <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
               One Dashboard.
               <br />
@@ -35,6 +39,7 @@ function Home() {
               One Coding Journey.
             </h1>
 
+            {/* Description */}
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
               Track your coding progress, monitor your streaks, analyze
               your performance and manage every coding platform from one
@@ -56,32 +61,48 @@ function Home() {
 
             {/* Small Stats */}
             <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm lg:justify-start">
+
               <div>
-                <p className="text-2xl font-bold text-white">10+</p>
-                <p className="text-zinc-500">Platforms</p>
+                <p className="text-2xl font-bold text-white">
+                  10+
+                </p>
+                <p className="text-zinc-500">
+                  Platforms
+                </p>
               </div>
 
               <div>
-                <p className="text-2xl font-bold text-white">1</p>
-                <p className="text-zinc-500">Unified Dashboard</p>
+                <p className="text-2xl font-bold text-white">
+                  1
+                </p>
+                <p className="text-zinc-500">
+                  Unified Dashboard
+                </p>
               </div>
 
               <div>
-                <p className="text-2xl font-bold text-white">∞</p>
-                <p className="text-zinc-500">Possibilities</p>
+                <p className="text-2xl font-bold text-white">
+                  ∞
+                </p>
+                <p className="text-zinc-500">
+                  Possibilities
+                </p>
               </div>
+
             </div>
           </div>
 
           {/* Right Dashboard Preview */}
           <div className="relative">
 
+            {/* Glow */}
             <div className="absolute -inset-4 rounded-3xl bg-violet-600/10 blur-2xl" />
 
             <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 p-5 shadow-2xl">
 
               {/* Fake Browser Header */}
               <div className="mb-5 flex items-center justify-between border-b border-zinc-800 pb-4">
+
                 <div className="flex gap-2">
                   <span className="h-3 w-3 rounded-full bg-red-500/70" />
                   <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
@@ -91,11 +112,13 @@ function Home() {
                 <span className="text-xs text-zinc-500">
                   codeverse.dev/dashboard
                 </span>
+
               </div>
 
               {/* Dashboard */}
               <div className="space-y-4">
 
+                {/* Welcome */}
                 <div>
                   <p className="text-sm text-zinc-500">
                     Welcome back 👋
@@ -135,6 +158,7 @@ function Home() {
                 <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
 
                   <div className="flex items-center justify-between">
+
                     <p className="text-sm font-medium">
                       Coding Activity
                     </p>
@@ -142,6 +166,7 @@ function Home() {
                     <span className="text-xs text-violet-400">
                       This Week
                     </span>
+
                   </div>
 
                   <div className="mt-5 flex h-24 items-end gap-2">
@@ -157,9 +182,10 @@ function Home() {
                     )}
 
                   </div>
+
                 </div>
 
-                {/* Platforms */}
+                {/* Connected Platforms */}
                 <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
 
                   <p className="mb-3 text-sm font-medium">
@@ -190,6 +216,10 @@ function Home() {
 
         </div>
       </section>
+
+      {/* Platform Section */}
+      <PlatformSection />
+
     </main>
   );
 }
