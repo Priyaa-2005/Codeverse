@@ -3,6 +3,8 @@ import PlatformSection from "../components/platforms/PlatformSection";
 import FeaturesSection from "../components/features/FeaturesSection";
 import HowItWorks from "../components/how-it-works/HowItWorks";
 import CTASection from "../components/cta/CTASection";
+import Footer from "../components/footer/Footer";
+
 function Home() {
   return (
     <main
@@ -190,6 +192,9 @@ function Home() {
       <HowItWorks/>
 
       <CTASection />
+
+      <Footer/>
+      
     </main>
   );
 }
