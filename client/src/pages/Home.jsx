@@ -1,7 +1,7 @@
 import Navbar from "../components/layout/Navbar";
 import PlatformSection from "../components/platforms/PlatformSection";
 import FeaturesSection from "../components/features/FeaturesSection";
-
+import HowItWorks from "../components/how-it-works/HowItWorks";
 function Home() {
   return (
     <main
@@ -185,6 +185,8 @@ function Home() {
 
       {/* ==================== FEATURES SECTION ==================== */}
       <FeaturesSection />
+
+      <HowItWorks/>
     </main>
   );
 }
