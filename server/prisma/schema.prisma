@@ -1,0 +1,55 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated"
+  importFileExtension = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  problems Problem[]
+  goals    Goal[]
+}
+
+model Problem {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  title      String
+  platform   String
+  difficulty String?
+  topic      String?
+  solvedAt   DateTime @default(now())
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([platform])
+  @@index([solvedAt])
+}
+
+model Goal {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  title     String
+  target    Int
+  current   Int       @default(0)
+  deadline  DateTime?
+  completed Boolean   @default(false)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
